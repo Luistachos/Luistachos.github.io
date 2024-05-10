@@ -1,4 +1,127 @@
 .fiolosofia{
-height: 500px;
+   
     background-image: url("DoomFondo1.png");
+    background-size: 100%;
 }
+.Ofertas{
+    text-align: center;
+}
+
+.logo{
+    padding-bottom: 50px;
+}
+
+.linea{
+    background-color: rgb(255, 72, 0);
+    height: 2px;
+    width: 70%;
+
+}
+
+.topnav {
+    text-align: center;
+    background-color: #000000;
+    overflow: hidden;
+    height: 200px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10000;
+    font: 400 16px/24px 'DIN Next W01',Helvetica,Arial,sans-serif
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    border-bottom: 3px solid transparent; /* Línea de fondo transparente */
+    transition: border-bottom-color 0.3s;
+    float: center;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    border-bottom-color: rgb(255, 72, 0);
+    
+  }
+  
+  /* Add a color to the active/current link */
+  .topnav a.active {
+    background-color: #000000;
+    color: white;
+  }
+
+  .fiolosofia h2{
+    text-align: left;
+    margin: 0 0 50px;
+    padding-top: 170px;
+    padding-left: 100px;
+  }
+
+  .fiolosofia p{
+    font-size: 1.25em;
+    margin-left: 100px;
+    margin-bottom: 40px;
+  }
+
+  .pop{
+    text-decoration: none;
+    background-color: #f2f2f2;
+    color: #000000;
+    margin-right: 15px;
+    
+    
+  }
+
+  .Ofertas h2{
+    margin-top: 50px;
+  }
+
+  .columna1{
+    text-align: left;
+    position: absolute;
+	width: 550px;
+	margin-top: 10px;
+    margin-bottom: 20px;
+}
+.columna2{
+    text-align: left;
+    position: absolute;
+    margin-left: 570px;
+    margin-right: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 500px;
+
+}
+
+.info{
+    text-decoration: none;
+    color: rgb(255, 72, 0);
+}
+
+a.info:hover{
+    text-decoration: none;
+    color: #f2f2f2;
+}
+
+.empleo{
+    text-decoration: none;
+    margin-top: 700px;
+    background-color: rgb(255, 72, 0);
+    color: #f2f2f2;
+    
+}
+.empleo:hover{
+    background-color: #f2f2f2;
+    color: #000000;
+
+}
+
+
+ 
+  

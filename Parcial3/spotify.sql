@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 29-05-2024 a las 03:02:51
+-- Tiempo de generación: 05-06-2024 a las 02:53:32
 -- Versión del servidor: 10.1.39-MariaDB
 -- Versión de PHP: 7.3.5
 
@@ -33,6 +33,22 @@ CREATE TABLE `artista` (
   `nombre` varchar(100) NOT NULL,
   `biografia` varchar(350) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `artista`
+--
+
+INSERT INTO `artista` (`id`, `nombre`, `biografia`) VALUES
+(1, 'Metallica', 'Metallica es una banda de trash metal, un género musical caracterizado por rápidos cortes de guitarra y una percusión acelerada, y uno de los grupos más populares de la historia gracias a su particular ejecución tanto vocal como instrumental.'),
+(2, 'Eminem', 'Eminem, es un cantante y compositor norteamericano, una de las principales estrellas de la historia del rap.'),
+(3, 'Romeo Santos', 'Romeo Santos, también conocido como el \"Rey de la Bachata\", es un músico de gran éxito e influencia en la industria de la música latina. Nació en el Bronx, Nueva York.'),
+(4, 'Johnny Cash', 'Johnny Cash (nacido como J. R. Cash, Kingsland, Arkansas; 26 de febrero de 1932-Nashville, Tennessee; 12 de septiembre de 2003) fue un cantante, compositor, músico, y actor estadounidense. Considerado el Rey de la Música Country y un icono de ese género.'),
+(5, 'Kendrick Lamar', 'Kendrick Lamar ha emergido como un titán en la escena del hip-hop, llevando sus rolas a nuevas ligas con una mezcla única de lírica aguda y conciencia social.'),
+(6, 'Daddy Yankee', 'Daddy Yankee es el mayor exponente de reggaetón en el mundo. Su verdadero nombre es Raymond Ayala Rodríguez y nació en Villa Kennedy, Puerto Rico, el 3 de febrero de 1976.'),
+(7, 'Khea', 'KHEA, es un cantante y compositor argentino referente del Trap. Empezó como muchos otros jóvenes de argentina, forjando su carrera en las calles, creciendo para darse una identidad.'),
+(8, 'Earth, Wind & Fire', 'conocidos también como EWF, es un grupo musical estadounidense, formado en Chicago (Illinois) en 1970. Fue fundado por Maurice White.'),
+(9, 'Tupac', 'Shakur, uno de los artistas con mayores ventas de todos los tiempos, fue un símbolo de la cultura gangsta-rap de la década de 1990. Tras su muerte, se convirtió en un icono de la cultura del hip-hop en EE.'),
+(10, 'Led Zeppelin', 'Led Zeppelin es en realidad un power trío que se caracteriza por el sonido distorsionado de la guitarra de Page y los característicos obstinatos (fases rítmicas que melódicamente se repiten), del bajo y la batería que le da un sonido verdaderamente poderoso.');
 
 -- --------------------------------------------------------
 
@@ -85,6 +101,20 @@ CREATE TABLE `genero` (
   `nombre` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Volcado de datos para la tabla `genero`
+--
+
+INSERT INTO `genero` (`id`, `nombre`) VALUES
+(57, 'rock'),
+(58, 'rap'),
+(59, 'bachata'),
+(60, 'country'),
+(61, 'hiphop'),
+(62, 'reggaeton'),
+(63, 'trap'),
+(64, 'disco');
+
 -- --------------------------------------------------------
 
 --
@@ -96,6 +126,16 @@ CREATE TABLE `membrecias` (
   `descripcion` varchar(100) NOT NULL,
   `precio` double NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `membrecias`
+--
+
+INSERT INTO `membrecias` (`id`, `descripcion`, `precio`) VALUES
+(1, 'membrecia indiviual mensual', 129),
+(2, 'membrecia duo mensual', 169),
+(3, 'membrecia familiar mensual', 199),
+(4, 'membrecia de estudiante mensual', 69);
 
 -- --------------------------------------------------------
 
@@ -138,6 +178,22 @@ CREATE TABLE `usuarios` (
   `correo` varchar(150) NOT NULL,
   `membrecias_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `usuarios`
+--
+
+INSERT INTO `usuarios` (`id`, `nombre`, `correo`, `membrecias_id`) VALUES
+(1, 'luistacho', 'luisitoalazasa09@gmail.com', 2),
+(2, 'julioazul', 'julioazul11@gmail.com', 3),
+(3, 'beto', 'alberthanosmirinda@gmail.com', 1),
+(4, 'cesarepng', 'cesarepng3@gmail.com', 4),
+(5, 'alberton17', 'zasaluisalberto03qgmail.com', 1),
+(6, 'majosita', 'majo@gmail.com', 4),
+(7, 'ibarracarrillo1010', 'ibarra@gmail.com', 3),
+(8, 'marianantes', 'marianita@gmail.com', 3),
+(9, 'estebanx23', 'estebancesar@gmail.com', 2),
+(10, 'mirindana', 'julio.lopez22@gmail.com', 4);
 
 --
 -- Índices para tablas volcadas
@@ -215,7 +271,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `artista`
 --
 ALTER TABLE `artista`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de la tabla `artistas_canciones`
@@ -239,13 +295,13 @@ ALTER TABLE `favoritos`
 -- AUTO_INCREMENT de la tabla `genero`
 --
 ALTER TABLE `genero`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
 
 --
 -- AUTO_INCREMENT de la tabla `membrecias`
 --
 ALTER TABLE `membrecias`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `playlist`
@@ -263,7 +319,7 @@ ALTER TABLE `playlist_canciones`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- Restricciones para tablas volcadas
@@ -287,12 +343,6 @@ ALTER TABLE `canciones`
 ALTER TABLE `favoritos`
   ADD CONSTRAINT `favoritos_ibfk_1` FOREIGN KEY (`canciones_id`) REFERENCES `canciones` (`id`),
   ADD CONSTRAINT `favoritos_ibfk_2` FOREIGN KEY (`usuarios_id`) REFERENCES `usuarios` (`id`);
-
---
--- Filtros para la tabla `genero`
---
-ALTER TABLE `genero`
-  ADD CONSTRAINT `genero_ibfk_1` FOREIGN KEY (`id`) REFERENCES `canciones` (`generos_id`);
 
 --
 -- Filtros para la tabla `playlist`

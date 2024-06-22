@@ -15,31 +15,146 @@
         <table border="2" style="background-color: olivedrab;">
             <tr>
                 <td style="width: 150px;">
-                    <p>Mostrar Todos los alumnos de la tabla alumnos</p>
+                    <p>1. Mostrar Todos los alumnos de la tabla alumnos</p>
                 </td>
                 <td>
                     <img src="imgs/CAP_ALumnos.png" alt="" style="height: 150px; width: 200px;">
                 </td>
             </tr>
         </table>
-    </div>
+    </div><br>
 
     <div class="cent">
-        <h1 style="font-size: 20px; font-family: 'Times New Roman', Times, serif; border: solid black 2px; background-color: white; border-radius: 15px; padding: 3px;">SELECT curso.nombreDescriptivo,asignatura.nombre FROM curso INNER JOIN asignatura ON curso.idCurso=asignatura.curso
-        </h1>
+        <h1 style="font-size: 20px; font-family: 'Times New Roman', Times, serif; border: solid black 2px; background-color: white; border-radius: 15px; padding: 3px;">SELECT curso.nombreDescriptivo,asignatura.nombre FROM curso INNER JOIN asignatura ON curso.idCurso=asignatura.curso</h1>
     </div>
     <div class="cent">
         <table border="2" style="background-color: olivedrab;">
             <tr>
                 <td style="width: 150px;">
-                    <p>Mostrar los nombres de los cursos con sus respectivas asignaturas</p>
+                    <p>2. Mostrar los nombres de los cursos con sus respectivas asignaturas</p>
                 </td>
                 <td>
                     <img src="imgs/CAP_ALumnos.png" alt="" style="height: 150px; width: 200px;">
                 </td>
             </tr>
         </table>
+    </div><br>
+
+    <div class="cent">
+        <h1 style="font-size: 20px; font-family: 'Times New Roman', Times, serif; border: solid black 2px; background-color: white; border-radius: 15px; padding: 3px;">SELECT curso.nombreDescriptivo,asignatura.nombre FROM curso INNER JOIN asignatura ON curso.idCurso=asignatura.curso</h1>
     </div>
+    <div class="cent">
+        <table border="2" style="background-color: olivedrab;">
+            <tr>
+                <td style="width: 150px;">
+                    <p>3. Mostrar listado (nombre y apeliido) de alumnos que tengan beca</p>
+                </td>
+                <td>
+                    <img src="imgs/cap_3" alt="" style="height: 150px; width: 200px;">
+                </td>
+            </tr><br>
+
+            <div class="cent">
+                <h1 style="font-size: 20px; font-family: 'Times New Roman', Times, serif; border: solid black 2px; background-color: white; border-radius: 15px; padding: 3px;">SELECT alumno.nombre, alumno.apellido1, alumno.apellido2 FROM alumno WHERE alumno.beca LIKE 'si'
+                </h1>
+            </div>
+            <div class="cent">
+                <table border="2" style="background-color: olivedrab;">
+                    <tr>
+                        <td style="width: 150px;">
+                            <p>4. Mostrar listado de profesores (nombre, apellido) y su numero de contacto</p>
+                        </td>
+                        <td>
+                            <img src="" alt="" style="height: 150px; width: 200px;">
+                        </td>
+                    </tr><br>
+
+                    <div class="cent">
+                        <h1 style="font-size: 20px; font-family: 'Times New Roman', Times, serif; border: solid black 2px; background-color: white; border-radius: 15px; padding: 3px;">SELECT profesor.nombre, profesor.apellido1, profesor.apellido2, tlfcontactoprof.telefono FROM profesor INNER JOIN tlfcontactoprof on profesor.idProfesor = tlfcontactoprof.idProfesor</h1>
+                    </div>
+                    <div class="cent">
+                        <table border="2" style="background-color: olivedrab;">
+                            <tr>
+                                <td style="width: 150px;">
+                                    <p>5. Mostrar listado de alumnos (todos los campos) que estan inscritos a programacion</p>
+                                </td>
+                                <td>
+                                    <img src="" alt="" style="height: 150px; width: 200px;">
+                                </td>
+                            </tr><br>
+
+                            <div class="cent">
+                                <h1 style="font-size: 20px; font-family: 'Times New Roman', Times, serif; border: solid black 2px; background-color: white; border-radius: 15px; padding: 3px;">SELECT curso.nombreDescriptivo,asignatura.nombre FROM curso INNER JOIN asignatura ON curso.idCurso=asignatura.curso</h1>
+                            </div>
+                            <div class="cent">
+                                <table border="2" style="background-color: olivedrab;">
+                                    <tr>
+                                        <td style="width: 150px;">
+                                            <p>6. obtener listado de profesores y asignaturas que imparten</p>
+                                        </td>
+                                        <td>
+                                            <img src="" alt="" style="height: 150px; width: 200px;">
+                                        </td>
+                                    </tr><br>
+
+                                    <div class="cent">
+                                        <h1 style="font-size: 20px; font-family: 'Times New Roman', Times, serif; border: solid black 2px; background-color: white; border-radius: 15px; padding: 3px;">SELECT curso.nombreDescriptivo,asignatura.nombre FROM curso INNER JOIN asignatura ON curso.idCurso=asignatura.curso</h1>
+                                    </div>
+                                    <div class="cent">
+                                        <table border="2" style="background-color: olivedrab;">
+                                            <tr>
+                                                <td style="width: 150px;">
+                                                    <p>7. Mostrar asignatura que tiene mas nombres inscritosy su total</p>
+                                                </td>
+                                                <td>
+                                                    <img src="" alt="" style="height: 150px; width: 200px;">
+                                                </td>
+                                            </tr><br>
+
+                                            <div class="cent">
+                                                <h1 style="font-size: 20px; font-family: 'Times New Roman', Times, serif; border: solid black 2px; background-color: white; border-radius: 15px; padding: 3px;">SELECT curso.nombreDescriptivo,asignatura.nombre FROM curso INNER JOIN asignatura ON curso.idCurso=asignatura.curso</h1>
+                                            </div>
+                                            <div class="cent">
+                                                <table border="2" style="background-color: olivedrab;">
+                                                    <tr>
+                                                        <td style="width: 150px;">
+                                                            <p>8. Mostrar listado de alumnos que les da clase el profesor con id PR048 (JOSE MANUEL) sin importar en que asignatura este inscrito</p>
+                                                        </td>
+                                                        <td>
+                                                            <img src="" alt="" style="height: 150px; width: 200px;">
+                                                        </td>
+                                                    </tr><br>
+
+                                                    <div class="cent">
+                                                        <h1 style="font-size: 20px; font-family: 'Times New Roman', Times, serif; border: solid black 2px; background-color: white; border-radius: 15px; padding: 3px;">SELECT curso.nombreDescriptivo,asignatura.nombre FROM curso INNER JOIN asignatura ON curso.idCurso=asignatura.curso</h1>
+                                                    </div>
+                                                    <div class="cent">
+                                                        <table border="2" style="background-color: olivedrab;">
+                                                            <tr>
+                                                                <td style="width: 150px;">
+                                                                    <p>9. Mostrar listado de curso con asignaturay el profesor que las imparte</p>
+                                                                </td>
+                                                                <td>
+                                                                    <img src="" alt="" style="height: 150px; width: 200px;">
+                                                                </td>
+                                                            </tr><br>
+
+                                                            <div class="cent">
+                                                                <h1 style="font-size: 20px; font-family: 'Times New Roman', Times, serif; border: solid black 2px; background-color: white; border-radius: 15px; padding: 3px;">SELECT curso.nombreDescriptivo,asignatura.nombre FROM curso INNER JOIN asignatura ON curso.idCurso=asignatura.curso</h1>
+                                                            </div>
+                                                            <div class="cent">
+                                                                <table border="2" style="background-color: olivedrab;">
+                                                                    <tr>
+                                                                        <td style="width: 150px;">
+                                                                            <p>10. Mostrar listado de alumnos, asignatura que cursa, profesor que la imparte y curso al que pertenece</p>
+                                                                        </td>
+                                                                        <td>
+                                                                            <img src="" alt="" style="height: 150px; width: 200px;">
+                                                                        </td>
+                                                                    </tr><br>
+
+            
+        </table>
     <script src="bootstrap-5.0.2-dist/js/bootstrap.js"></script>
 </body>
 </html>

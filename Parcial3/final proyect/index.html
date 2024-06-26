@@ -1,0 +1,214 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto final pracial #3</title>
+    <link rel="stylesheet" href="../../parcial 2/css/bootstrap.css">
+    <script src="../../parcial 2/js/jquery-3.7.1.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Proyecto Final parcial 3</h1>
+        <p>Zamora Sanchez Luis Alberto</p>
+         <!-- Consulta 1 -->
+        <div class="row mt-2">
+            <div class="row">
+                <h3 class="card badge rounded-pill bg-dark">SELECT * FROM alumnos</h3>
+                <h4 class="badge bg-secondary">Consulta #1. Obtener el listado de todos los alumnos de la facultad</h4>
+                <img src="imgs/CAP_ALumnos.png" alt="" class="img-fluid" style="border: 3px solid blue;">
+            </div>
+            <br>
+             <!-- Consulta 2 -->
+            <div class="row mt-2">
+                
+                <div class="row">
+                    <h3 class="card badge rounded-pill bg-dark">SELECT curso.nombreDescriptivo,asignatura.nombre FROM curso <br>
+                        INNER JOIN asignatura <br> ON curso.idCurso = asignatura.curso</h3>
+                        <h4 class="badge bg-secondary">Consulta #2. Obtener el listado de cursos(nombres) y las asignaturas que tienen</h4>
+                        <img src="imgs/Cap_asignaturanombre.png" alt="" class="img-fluid" style="border: 3px solid blue;">
+                    </div>
+                </div>
+                    <!-- Consulta 3 -->
+                <div class="row mt-2">
+                    <div class="row">
+                        <h3 class="card badge rounded-pill bg-dark">SELECT
+                            nombre,
+                            apellido1,
+                            apellido2
+                        FROM
+                            alumno <br>
+                        WHERE
+                            beca IS NOT NULL</h3>
+                            <h4 class="badge bg-secondary">CONSULTA #3. OBTENER EL LISTADO DE NOMBRES Y APELLIDO DE ALUMNOS QUE TENGAN BECA</h4>
+                            <img src="imgs/cap_3.png" alt="" class="img-fluid" style="border: 3px solid blue;">
+                        </div>
+                    </div>
+                    <!-- Consulta 4 -->
+                    <div class="row mt-2">
+                        <div class="row">
+                            <h3 class="card badge rounded-pill bg-dark">SELECT <br>
+                                p.idProfesor,<br>
+                                p.nombre AS nombre_profesor,<br>
+                                p.apellido1 AS apellido1_profesor,<br>
+                                p.apellido2 AS apellido2_profesor,<br>
+                                t.telefono AS numero_contacto <br>
+                            FROM <br>
+                                profesor p <br>
+                            JOIN <br>
+                                tlfcontactoprof t ON p.idProfesor = t.idProfesor <br>
+                            ORDER BY <br>
+                                p.idProfesor;</h3> <br>
+                                <h4 class="badge bg-secondary">CONSULTA #4. OBTENER EL LISTADO DE PROFESORES Y SU NUMERO DE CONTACO.</h4>
+                                <img src="imgs/cap_4.png" alt="" class="img-fluid" style="border: 3px solid blue;">
+                            </div>
+                        </div>
+
+                        <!-- Consulta 5 -->
+                    <div class="row mt-2">
+                        <div class="row">
+                            <h3 class="card badge rounded-pill bg-dark">SELECT <br>
+                                al.* <br>
+                            FROM <br>
+                                alumno al <br>
+                            JOIN <br>
+                                matricula m ON al.idAlumno = m.idAlumno <br>
+                            JOIN <br>
+                                asignatura a ON m.idAsignatura = a.idAsignatura <br>
+                            WHERE <br>
+                                a.nombre = 'Programacion'</h3> <br>
+                                <h4 class="badge bg-secondary">CONSULTA #5. OBTENER EL LISTADO DE ALUMNOS <br> (TODOS LOS CAMPOS) QUE ESTÁN ISCRITOS A LA ASIGNATURA DE PROGRAMACION</h4>
+                                <img src="imgs/cap_5.png" alt="" class="img-fluid" style="border: 3px solid blue;">
+                            </div>
+                        </div>
+
+                        <!-- Consulta 6 -->
+                    <div class="row mt-2">
+                        <div class="row">
+                            <h3 class="card badge rounded-pill bg-dark">SELECT <br>
+                                p.idProfesor, <br>
+                                p.nombre AS nombre_profesor, <br>
+                                p.apellido1 AS apellido1_profesor, <br>
+                                p.apellido2 AS apellido2_profesor, <br>
+                                a.idAsignatura, <br>
+                                a.nombre AS nombre_asignatura <br>
+                            FROM <br>
+                                profesor p <br>
+                            JOIN <br>
+                                impartir i ON p.idProfesor = i.idProfesor <br>
+                            JOIN <br>
+                                asignatura a ON i.idAsignatura = a.idAsignatura <br>
+                            ORDER BY <br>
+                                p.idProfesor, a.idAsignatura;</h3> <br>
+                                <h4 class="badge bg-secondary">CONSULTA #6. OBTENER EL LISTADO DE PROFESORES Y ASIGNATURAS QUE IMPARTEN</h4>
+                                <img src="imgs/cap_6.png" alt="" class="img-fluid" style="border: 3px solid blue;">
+                            </div>
+                        </div>
+
+                        <!-- Consulta 7 -->
+                    <div class="row mt-2">
+                        <div class="row">
+                            <h3 class="card badge rounded-pill bg-dark">SELECT <br>
+                                a.idAsignatura, <br>
+                                a.nombre, <br>
+                                COUNT(m.idAlumno) AS total_alumnos <br>
+                            FROM <br>
+                                asignatura a <br>
+                            JOIN <br>
+                                matricula m ON a.idAsignatura = m.idAsignatura <br>
+                            GROUP BY <br>
+                                a.idAsignatura, a.nombre <br>
+                            ORDER BY <br>
+                                total_alumnos DESC <br>
+                            LIMIT 1;</h3> <br>
+                                <h4 class="badge bg-secondary">CONSULTA #7. MOSTAR LA ASIGNATURA QUE TIENE MAS ALUMNOS INSCRITOS Y SU TOTAL</h4>
+                                <img src="imgs/cap_7.png" alt="" class="img-fluid" style="border: 3px solid blue;">
+                            </div>
+                        </div>
+                          <!-- Consulta 8 -->
+                    <div class="row mt-2">
+                        <div class="row">
+                            <h3 class="card badge rounded-pill bg-dark">SELECT <br>
+                                a.idAlumno,<br>
+                                a.nombre,<br>
+                                a.apellido1,<br>
+                                a.apellido2,<br>
+                                a.email <br>
+                            FROM <br>
+                                alumno a <br>
+                            JOIN <br>
+                                matricula m ON a.idAlumno = m.idAlumno <br>
+                            JOIN <br>
+                                impartir i ON m.idAsignatura = i.idAsignatura <br>
+                            WHERE  <br>
+                                i.idProfesor = 'PR048';</h3> <br>
+                                <h4 class="badge bg-secondary">CONSULTA #8. OBTENER EL LISTADO DE ALUMNOS QUE LES DA CLASE EL PROFESOR CON ID PR048 (JOSE MANUEL), SIN IMPORTAR EN QUE ASIGNATURA ESTÉ INSCRITO </h4>
+                                <img src="imgs/cap_8.png" alt="" class="img-fluid" style="border: 3px solid blue;">
+                            </div>
+                        </div>
+                         <!-- Consulta 9 -->
+                    <div class="row mt-2">
+                        <div class="row">
+                            <h3 class="card badge rounded-pill bg-dark">SELECT <br>
+                                c.idCurso, <br>
+                                c.nombreDescriptivo AS nombre_curso,<br>
+                                a.idAsignatura,<br>
+                                a.nombre AS nombre_asignatura,<br>
+                                p.idProfesor,<br>
+                                p.nombre AS nombre_profesor,<br>
+                                p.apellido1 AS apellido1_profesor,<br>
+                                p.apellido2 AS apellido2_profesor <br>
+                            FROM <br>
+                                curso c <br>
+                            JOIN <br>
+                                asignatura a ON c.idCurso = a.curso <br>
+                            JOIN <br>
+                                impartir i ON a.idAsignatura = i.idAsignatura <br>
+                            JOIN <br>
+                                profesor p ON i.idProfesor = p.idProfesor <br>
+                            ORDER BY <br>
+                                c.idCurso, a.idAsignatura, p.idProfesor;</h3> <br>
+                                <h4 class="badge bg-secondary">CONSULTA #9. OBTENER EL LISTADO DE CURSOS, CON ASIGNATURA, Y EL MAESTRO QUE LAS IMPARTE  </h4>
+                                <img src="imgs/cap_9.png" alt="" class="img-fluid" style="border: 3px solid blue;">
+                            </div>
+                        </div>
+                         <!-- Consulta 10 -->
+                    <div class="row mt-2">
+                        <div class="row">
+                            <h3 class="card badge rounded-pill bg-dark">SELECT <br>
+                                al.idAlumno, <br>
+                                al.nombre AS nombre_alumno, <br>
+                                al.apellido1 AS apellido1_alumno, <br>
+                                al.apellido2 AS apellido2_alumno, <br>
+                                a.idAsignatura, <br>
+                                a.nombre AS nombre_asignatura, <br>
+                                p.idProfesor, <br>
+                                p.nombre AS nombre_profesor, <br>
+                                p.apellido1 AS apellido1_profesor, <br>
+                                p.apellido2 AS apellido2_profesor, <br>
+                                c.idCurso, <br>
+                                c.nombreDescriptivo AS nombre_curso <br>
+                            FROM <br>
+                                alumno al <br>
+                            JOIN <br>
+                                matricula m ON al.idAlumno = m.idAlumno <br>
+                            JOIN <br>
+                                asignatura a ON m.idAsignatura = a.idAsignatura <br>
+                            JOIN <br>
+                                impartir i ON a.idAsignatura = i.idAsignatura <br>
+                            JOIN <br>
+                                profesor p ON i.idProfesor = p.idProfesor <br>
+                            JOIN <br>
+                                curso c ON a.curso = c.idCurso <br>
+                            ORDER BY <br>
+                                al.idAlumno, a.idAsignatura</h3> <br>
+                                <h4 class="badge bg-secondary">CONSULTA #10. OBTENER EL LISTADO DE ALUMNOS ,CON ASIGNATURAS QUE CURSA, PROFESOR QUE IMPARTE Y CURSI AL QUE PERTENECE  </h4>
+                                <img src="imgs/cap_10.png" alt="" class="img-fluid" style="border: 3px solid blue;">
+                            </div>
+                        </div>
+                </div>
+    </div>
+    <script src="../../parcial 2/js/bootstrap.js"></script>
+</body>
+</html>

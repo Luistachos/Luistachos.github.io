@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen en línea</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<body>
+    <div class="container">
+        <form action="practica4.php" method="POST">
+            <div class="row">
+                <h1>Exámen de Zelda</h1><hr>
+                    <div class="card mb-4">
+                        <div class="card-header">
+                        1. Año de lanzamiento del juego The leyend of zelda ocarina of time.
+                        </div>
+                        <div class="card-body">
+                            <p><input type="radio" name="pregunta1" value="1998" required> 1998 </p>
+                            <p><input type="radio" name="pregunta1" value="2000" required> 2000 </p>
+                            <p><input type="radio" name="pregunta1" value="1999" required checked> 1999 </p>
+                        </div>
+                    </div>
+                    <div class="card p-4 mb-4">
+                        <p>
+                            2. <input type="text" name="pregunta2" value="Ocarina" required> Artefacto antiguo capaz de alterar el espacio tiempo por medio de melodias.
+                        </p>
+                    </div>
+                    <div class="card mb-4">
+                        <div class="card-header">
+                        3. ¿Cual de las siguentes opciones son armas conseguibles en el juego Zelda? (Selecciona 2)
+                        </div>
+                        <div class="card-body">
+                            <p><input type="checkbox" name="pregunta3[]" value="Espada maestra" checked> Espada maestra </p>
+                            <p><input type="checkbox" name="pregunta3[]" value="Una bomba molotov" checked> Una bomba molotov </p>
+                            <p><input type="checkbox" name="pregunta3[]" value="Bumerang" > Bumerang </p>
+                        </div>
+                    </div>
+                    <div class="card mb-4">
+                        <div class="card-header">
+                        4. ¿Quen es el campeon de la raza Goron en Breath of the wild?
+                        </div>
+                        <div class="card-body">
+                            <p><input type="radio" name="pregunta4" value="Urbosa" required> Urbosa </p>
+                            <p><input type="radio" name="pregunta4" value="Revali" required> Revali </p>
+                            <p><input type="radio" name="pregunta4" value="Daruk" required checked> Daruk </p>
+                        </div>
+                    </div>
+                    <div class="card p-4 mb-4">
+                        <p>
+                            5. <input type="text" name="pregunta5" value="Heraldo" required> Fue el causante de la maldicion de reenarnacion en zelda y link.
+                        </p>
+                    </div>
+            </div>
+            <br><input type="submit" class="btn btn-primary" value="Terminar examen">
+        </form>
+    </div>
+</body>
+</html>

@@ -117,3 +117,7 @@ function endGame(which){
         testo.innerHTML="LAS Os HAN GANADO";
     }
 }
+
+function reiniciar(){
+    window.location.href = 'practica7.html';
+}
